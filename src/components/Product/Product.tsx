@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     flex: 0.3,
   },
   containerText: {
+    justifyContent: 'space-between',
     flex: 0.65,
   },
   containerClose: {

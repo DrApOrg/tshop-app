@@ -17,11 +17,11 @@ const BagCheckoutScreen = () => {
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.title}>bag</Text>
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          data={product}
-          renderItem={(item) => <Product />}
-        />
+        {
+          product.map((value, index) => (
+            <Product key={index}/>
+          ))
+        }
         <Text style={styles.title}>promocode</Text>
         <CodPromo />
         <Totals />
