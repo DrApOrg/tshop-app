@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigation } from "@react-navigation/native"
+import { NavigationProp, ParamListBase, useNavigation } from "@react-navigation/native"
 
 // types
 import { Category } from "../types/Category"

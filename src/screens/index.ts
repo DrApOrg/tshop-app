@@ -1,1 +1,18 @@
 export { default as HomeScreen } from './HomeScreen'
+export { default as CategoryScreen } from './CategoryScreen'
+export { default as AccountScreen } from './Account/AccountScreen'
+export { default as BagCheckoutScreen } from './BagCheckoutScreen'
+export { default as FavScreen } from './FavScreen'
+export { default as MyOrderScreen } from './Account/MyOrderScreen'
+export { default as MyDetailScreen } from './Account/MyDetailScreen'
+export { default as PaymentMethodsScreen } from './Account/PaymentMethodsScreen'
+export { default as AddressBook } from './Account/AddressBook'
+
+
+export { default as WelcomeScreen } from './Register/WelcomeScreen'
+export { default as StepOne } from './Register/StepOne'
+export { default as StepTwo } from './Register/StepTwo'
+export { default as StepThree } from './Register/StepThree'
+export { default as StepFour } from './Register/StepFour'
+export { default as LoginScreen } from './LoginScreen'
+export { default as UserScreen } from './UserScreen'
