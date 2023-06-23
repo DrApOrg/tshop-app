@@ -1,6 +1,4 @@
-import { RouteProp } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { Text } from "react-native"
 import CategoryScreen from "../screens/CategoryScreen";
 import { HomeScreen } from "../screens";
 import { Category } from "../types/Category";

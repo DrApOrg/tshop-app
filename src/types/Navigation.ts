@@ -2,6 +2,6 @@ export enum Screens {
   HOME = "HomeStack",
   BAG = "Bag",
   FAVS = "Fav",
-  SETTINGS = "Settings",
+  ACCOUNT = "AccountStack",
   DETAIL_CATEGORIE = "DetailCategory"
 }

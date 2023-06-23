@@ -1,4 +1,4 @@
-import { Dimensions, Image, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native"
+import { Image, StyleSheet, TextInput, View } from "react-native"
 
 const SearchBar = () => {
   return (
@@ -18,13 +18,15 @@ const styles = StyleSheet.create({
   viewTextInput: {
     width: '100%',
     borderRadius: 12,
-    height: 50,
+    height: 60,
     justifyContent: 'center',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,
     gap: 10,
+    backgroundColor: "#F5F5F5",
+    color: "#9E9E9E",
 
     borderWidth: 1,
     borderColor: '#C7C7C7'

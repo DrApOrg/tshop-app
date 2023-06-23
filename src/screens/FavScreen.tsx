@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     gap: 20,
-    marginTop: Platform.OS === 'ios' ? 70 : 60,
+    marginTop: Platform.OS === 'ios' ? 70 : 50,
     marginHorizontal: 16,
     backgroundColor: '#fff',
   },
