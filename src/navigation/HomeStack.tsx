@@ -1,35 +1,36 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CategoryScreen from "../screens/CategoryScreen";
 import { HomeScreen } from "../screens";
 import { Category } from "../types/Category";
+import SubCategoryScreen from "../screens/SubCategoryScreen";
+import { Subcategory } from "../types/category";
+import { Product } from "../types/Product";
+import ProductDetailScreen from "../screens/ProductDetailScreen";
 
 type RootStackParamList = {
   Home: undefined;
-  DetailCategory: {category: Category}
-}
+  DetailCategory: { category: Category };
+  DetailSubCategory: { subcategory: Subcategory };
+  DetailProducts: { product: Product };
+};
 
-const Stack = createNativeStackNavigator<RootStackParamList>()
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const HomeStack = () => {
   return (
-    <Stack.Navigator
-    >
+    <Stack.Navigator>
       <Stack.Screen
         name="Home"
         component={HomeScreen}
         options={{
-          headerShown: false
+          headerShown: false,
         }}
       />
-      <Stack.Screen
-        name="DetailCategory"
-        component={ CategoryScreen }
-        options={({route}) => ({
-          title: route.params?.category.name
-        })}
-      />
+      <Stack.Screen name="DetailCategory" component={CategoryScreen} />
+      <Stack.Screen name="DetailSubCategory" component={SubCategoryScreen} />
+      <Stack.Screen name="DetailProducts" component={ProductDetailScreen} />
     </Stack.Navigator>
-  )
-}
+  );
+};
 
-export default HomeStack
+export default HomeStack;

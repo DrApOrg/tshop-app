@@ -1,8 +1,14 @@
-
 export interface Category {
-  id?: number;
+  _id?: number;
   name?: string;
   description?: string;
   image?: string;
-  subcategories?: Category[];
+  subcategories?: Subcategory[];
+}
+
+export interface Subcategory {
+  _id?: string;
+  name?: string;
+  description?: string;
+  image?: string;
 }

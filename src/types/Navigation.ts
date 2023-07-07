@@ -3,5 +3,7 @@ export enum Screens {
   BAG = "Bag",
   FAVS = "Fav",
   ACCOUNT = "AccountStack",
-  DETAIL_CATEGORIE = "DetailCategory"
+  DETAIL_CATEGORIE = "DetailCategory",
+  DETAIL_SUBCATEGORIE = "DetailSubCategory",
+  DETAIL_PRODUCTS = "DetailProducts",
 }

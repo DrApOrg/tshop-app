@@ -1,38 +1,33 @@
-import { useState } from "react"
-import { NavigationProp, ParamListBase, useNavigation } from "@react-navigation/native"
+import { useState, useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // types
-import { Category } from "../types/Category"
-import { History } from "../types/History"
+import { Category } from "../types/Category";
 
 export const useHomeViewModel = () => {
-  const navigation = useNavigation()
-  const [categories, setCategories] = useState<Category[]>([
-    {id: 1, name: 'bedroom'},
-    {id: 2, name: 'bedroom'},
-    {id: 3, name: 'bedroom'},
-    {id: 4, name: 'bedroom'},
-    {id: 5, name: 'bedroom'},
-    {id: 6, name: 'bedroom'},
-    {id: 7, name: 'bedroom'},
-    {id: 8, name: 'bedroom'},
-    {id: 9, name: 'bedroom'},
-  ])
-  const [histories, setHistories] = useState<History[]>([])
+  const navigation = useNavigation();
+  const [categories, setCategories] = useState<Category[]>([]);
 
-  const onPressCategorieItem = (category: Category)  => {
-    navigation.navigate('DetailCategory' as never, {category} as never)
-  }
+  useEffect(() => {
+    const fetchData = async (): Promise<void> => {
+      try {
+        const response = await fetch("http://192.168.1.4:4504/v1/api/category");
+        const data = await response.json();
+        setCategories(data.data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
 
-  const onPressHistoryItem = (history: History)  => {
-    navigation.navigate('DetailHistory' as never, {history} as never)
-  }
+    fetchData();
+  }, []);
+
+  const onPressCategorieItem = (category: Category) => {
+    navigation.navigate("DetailCategory" as never, { category } as never);
+  };
 
   return {
     categories,
-    histories,
     onPressCategorieItem,
-    onPressHistoryItem
-  }
-}
-
+  };
+};

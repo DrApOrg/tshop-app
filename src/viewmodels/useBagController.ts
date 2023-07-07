@@ -5,7 +5,7 @@ import { Product } from "../types/Product";
 export const useBagViewModel = () => {
   const [product, setProducts] = useState<Product[]>([
     {
-      id: 1,
+      _id: 1,
       name: "cama",
       description: "Esta comoda es bonita xd",
       price: 150.0,
