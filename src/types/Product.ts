@@ -11,6 +11,7 @@ export interface Product {
   stock?: number;
   supplier?: string;
   comments?: Comment[];
+  composition?: string;
   ratings?: Rating[];
   createdAt?: string;
   updatedAt?: string;

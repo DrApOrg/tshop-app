@@ -10,7 +10,8 @@ interface Props extends Product {
 const ProductItem: FunctionComponent<Props> = ({ product, onPress }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image style={styles.image} source={require("../../assets/img.png")} />
+      <Image style={styles.image} source={{ uri: product.image }} />
+
       <Text>
         <Text>{product.name}</Text>
         <Ionicons name="heart" size={24} color="black" />

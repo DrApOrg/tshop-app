@@ -1,11 +1,5 @@
 import { FunctionComponent } from "react";
-import {
-  StyleSheet,
-  Text,
-  Image,
-  Touchable,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 import { Category } from "../../types/Category";
 
 interface Props extends Category {

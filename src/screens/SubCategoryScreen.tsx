@@ -4,6 +4,7 @@ import {
   Platform,
   FlatList,
   ListRenderItemInfo,
+  Image,
 } from "react-native";
 import React from "react";
 import { Button, SearchBar } from "../components";
@@ -25,8 +26,9 @@ const SubCategoryScreen = ({ route }) => {
       <View>
         <SearchBar />
       </View>
+
       <View style={styles.containerButton}>
-        <Button title="Ordenar" icon="swap-vertical" color="#F  5F5F5" />
+        <Button title="Ordenar" icon="swap-vertical" color="#F5F5F5" />
         <Button title="Filtrar" icon="filter" color="#F5F5F5" />
       </View>
       <FlatList

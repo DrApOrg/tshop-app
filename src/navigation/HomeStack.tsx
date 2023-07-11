@@ -6,12 +6,14 @@ import SubCategoryScreen from "../screens/SubCategoryScreen";
 import { Subcategory } from "../types/category";
 import { Product } from "../types/Product";
 import ProductDetailScreen from "../screens/ProductDetailScreen";
+import ReviewScreen from "../screens/ReviewScreen";
 
 type RootStackParamList = {
   Home: undefined;
   DetailCategory: { category: Category };
   DetailSubCategory: { subcategory: Subcategory };
   DetailProducts: { product: Product };
+  ReviewScreen: { product: Product };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -29,6 +31,7 @@ const HomeStack = () => {
       <Stack.Screen name="DetailCategory" component={CategoryScreen} />
       <Stack.Screen name="DetailSubCategory" component={SubCategoryScreen} />
       <Stack.Screen name="DetailProducts" component={ProductDetailScreen} />
+      <Stack.Screen name="ReviewScreen" component={ReviewScreen} />
     </Stack.Navigator>
   );
 };

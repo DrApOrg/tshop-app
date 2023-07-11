@@ -22,7 +22,7 @@ const Button: FunctionComponent<Props> = ({
   color,
   height,
 }) => {
-  const iconName = icon;
+  const iconName = icon === "filter" ? "filter" : "swap-vertical";
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -45,7 +45,7 @@ const Button: FunctionComponent<Props> = ({
         {title}
       </Text>
       {icon && (
-        <MaterialCommunityIcons name={"filter"} size={24} color={"black"} />
+        <MaterialCommunityIcons name={iconName} size={24} color={"black"} />
       )}
     </TouchableOpacity>
   );

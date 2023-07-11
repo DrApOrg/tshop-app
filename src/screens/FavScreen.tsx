@@ -1,4 +1,5 @@
 import { Text, StyleSheet, View, Platform } from "react-native";
+import FloatingScreen from "./ProductInfoScreen";
 
 const FavScreen = () => {
   return (
