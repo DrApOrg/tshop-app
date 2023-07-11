@@ -46,6 +46,8 @@ const ProductInfoScreen: React.FC<Props> = ({ name, detail, prodcut }) => {
                 <Text style={styles.key}>Marca</Text>
                 <Text style={styles.value}>{prodcut.supplier}</Text>
               </View>
+              <Text style={styles.subtitle}>Composición</Text>
+              <Text>{prodcut.composition}</Text>
             </View>
           </View>
         </View>

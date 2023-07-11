@@ -65,8 +65,6 @@ const AddReview: React.FC<Props> = ({ name, product }) => {
       }
     };
     postData();
-    console.log("Rating:", rating);
-    console.log("Review Text:", reviewText);
     setReviewText("");
     setRating(0);
     closeModal();

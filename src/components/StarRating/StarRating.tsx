@@ -26,7 +26,7 @@ const StarRating: React.FC<Props> = ({ rating, onRatingChange }) => {
 
   return (
     <View style={styles.container}>
-      {[1, 2, 3, 4, 5].map((index) => renderStar(index))}
+      {[0, 1, 2, 3, 4].map((index) => renderStar(index))}
     </View>
   );
 };
